@@ -6,7 +6,7 @@ const app = express();
 
 app.use(express.json());
 
-let subjects = [
+let students = [
   { Id: 1, Sname: "Sumit Patel", Email: "sumitpatel@gmail.com" },
   { id: 2, Sname: "Ajay Patel", Email: "ajaypatel@gmail.com" },
   { id: 3, Sname: "Ankit Patel", Email: "ankitpatel@gmail.com" },
