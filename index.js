@@ -24,7 +24,10 @@ app.get("/students", (req, res) => {
 
 app.put("/students/:id", (req, res) => {
   const student = students.find((s) => s.id == req.params.id);
-  if (!student) return res.status(404).json({ message: "Student Not Found" });
+  if (!student)
+    return res.status(404).json({
+      message: "Student Not Found",
+    });
 
   Object.assign(student, req.body);
   res.json({ message: "Student Updated", data: student });
@@ -36,7 +39,9 @@ app.delete("/students/:id", (req, res) => {
     return res.status(404).json({ message: "Student Not Found" });
 
   students.splice(index, 1);
-  res.json({ message: "Student Deleted" });
+  res.json({
+    message: "Student Deleted",
+  });
 });
 
 app.listen(3000, () => {
